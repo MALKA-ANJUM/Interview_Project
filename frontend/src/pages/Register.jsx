@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axiosClient from "../api/axiosClient";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 export default function Register() {
     const [form, setForm] = useState({
@@ -19,9 +20,12 @@ export default function Register() {
         try {
             const { data } = await axiosClient.post("/register", form);
             localStorage.setItem("token", data.token);
-            navigate("/products");
-        } catch {
-            alert("Registration failed");
+            localStorage.setItem("role", data.role);
+             toast.success("Registration successful!"); // ✅ success toast
+
+            navigate("/user/profile");
+        } catch  (err){
+                   toast.error(err.response?.data?.message || "Registration failed"); // ✅ error toast
         }
     };
 

@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const axiosClient = axios.create({
-  	baseURL: '/api', // ✅ Relative path - works everywhere
+  	baseURL: 'http://127.0.0.1:8000/api', // ✅ Relative path - works everywhere
 });
 
 axiosClient.interceptors.request.use(config => {

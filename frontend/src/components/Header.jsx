@@ -15,9 +15,9 @@ export default function Header() {
 				<h4
 					className="m-0 fw-bold"
 					style={{ cursor: 'pointer' }}
-					onClick={() => navigate(token ? '/products' : '/login')}
+					onClick={() => navigate('/')}
 				>
-					Inventory Panel
+					Project
 				</h4>
 
 				<nav>

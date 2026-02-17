@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\File;
 
@@ -13,11 +14,12 @@ use Illuminate\Support\Facades\File;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/', [AuthController::class, 'web']);
 
-Route::get('/{any}', function () {
-    $path = public_path('build/index.html');
-    if (File::exists($path)) {
-        return File::get($path);
-    }
-    abort(404);
-})->where('any', '.*');
+// Route::get('/{any}', function () {
+//     $path = public_path('build/index.html');
+//     if (File::exists($path)) {
+//         return File::get($path);
+//     }
+//     abort(404);
+// })->where('any', '.*');
