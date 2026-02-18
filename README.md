@@ -197,10 +197,6 @@ cd frontend
 npm run dev
 ```
 
-
+---
 By Malka Anjum,
 Full Stack Developer.
-
----
-
-**Note**: This project is designed for educational and demonstration purposes, showcasing modern full-stack development practices with Laravel and React.
