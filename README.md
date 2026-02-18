@@ -1,4 +1,4 @@
-# Interview Project - Full-Stack User Management System
+# Full-Stack Laravel & React Project
 
 A comprehensive full-stack application built with Laravel (backend)and React  (frontend), demonstrating service layer architecture patterns including service layers, repository patterns, role-based access control (RBAC), queue-based job processing, and automated task scheduling.
 
@@ -200,3 +200,4 @@ npm run dev
 ---
 By Malka Anjum,
 Full Stack Developer.
+
